@@ -4,7 +4,7 @@ import { Button } from '@material-ui/core';
 import { useState } from 'react';
 import styled from '@emotion/styled'
 import { useHistory } from 'react-router-dom';
-import { useStateValue } from '../Searchprovider.js';
+import { useStateValue } from '../SearchProvider.js';
 import { SET_SEARCH_TERM } from '../types.js';
 
 const SearchInput = styled.div`
