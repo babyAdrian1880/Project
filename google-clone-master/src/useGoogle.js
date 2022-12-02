@@ -1,4 +1,4 @@
-/*import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const useGoogle = term => {
     const [data, setData] = useState(null);
@@ -14,4 +14,4 @@ const useGoogle = term => {
     return { data };
 }
 
-export default useGoogle */
+export default useGoogle 

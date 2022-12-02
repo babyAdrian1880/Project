@@ -15,6 +15,7 @@ import MicIcon from '@material-ui/icons/Mic';
 
 import { useStateValue } from '../SearchProvider.js';
 import { SET_SEARCH_TERM } from '../types.js';
+import { useHistory } from 'react-router-dom';
 
 const SearchInput = styled.div`
     display: flex;
@@ -57,8 +58,8 @@ const SearchButton = styled.div`
 
 const Search = ({ hide }) => {
     const [input, setInput] = useState("");
-    
     const[{}, dispatch] = useStateValue();
+    const history = useHistory()
 
     const search = e => {
         e.preventDefault();
