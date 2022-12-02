@@ -1,8 +1,9 @@
+/* eslinit-disable no-unused-vars */
 import react, { createContext, useContext, useReducer } from "react"
 
 export const StateContext = createContext();
 
-export const SearchProvider =({ reducer, initalState, children })=>(
+export const SearchProvider =({ reducer, initialState, children })=>(
     <StateContext.Provider value={useReducer(reducer, initialState)}>
         {children}
     </StateContext.Provider>

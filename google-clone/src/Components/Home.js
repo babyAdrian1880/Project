@@ -1,17 +1,18 @@
-import React from 'react'
+import React from "react"
 
 import AppsIcon from '@material-ui/icons/Apps';
 import AvatarIcon from '@material-ui/core/Avatar';
 
 import Search from './Search';
 import styled from '@emotion/styled';
+
 const HomeContainer = styled.div`
     display: flex;
     flex-direction: column;
     height: 100vh;
 `
 
-const HeadContainer = styled.div`
+const HeaderContainer = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 20px 30px;
@@ -41,30 +42,30 @@ const BodyContainer = styled.div`
         margin-bottom:
     }
 `
-
 const Home = () => {
-    return(
-    <div className='home'>
-        <div className='header'>
-            <div className='header-left'>
+    return (
+        <HomeContainer>
+        <HeaderContainer>
+                <Header>
                 <p>About</p>
                 <p>Store</p>
-            </div>
-            <div className='header-right'>
+                </Header>
+            <Header>
                 <p>Gmail</p>
                 <p>Images</p>
                 <AppsIcon />
                 <AvatarIcon />
-            </div>
-        </div>
-        <div className='body'>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/320px-Google_2015_logo.svg.png" alt="google-logo" />"
-        </div>
+            </Header>
+        </HeaderContainer>
+        <BodyContainer>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/320px-Google_2015_logo.svg.png" alt="google-logo" />
+        <div>
         <Search />
-    </div>
+        </div>
+    </BodyContainer>
+    </HomeContainer>
     )
 }
 
 export default Home
-
 

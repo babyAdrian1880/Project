@@ -1,9 +1,16 @@
+/* eslint-disable no-empty-pattern */
+/* eslint-disable no-undef */
+/* eslint-disable react/jsx-no-undef */
+import { Button } from "@material-ui/core";
+import { useState } from "react";
+
+
+import styled from 'styled-components'
 import SearchIcon from '@material-ui/icons/Search';
 import MicIcon from '@material-ui/icons/Mic';
-import { Button } from '@material-ui/core';
-import { useState } from 'react';
-import styled from '@emotion/styled'
-import { useHistory } from 'react-router-dom';
+
+
+
 import { useStateValue } from '../SearchProvider.js';
 import { SET_SEARCH_TERM } from '../types.js';
 
@@ -27,6 +34,7 @@ const SearchInput = styled.div`
         color:gray;
     }
 `
+
 const SearchButton = styled.div`
     margin-top: 20px;
     display: flex;
@@ -45,10 +53,9 @@ const SearchButton = styled.div`
     }
 `
 
-
 const Search = ({ hide }) => {
     const [input, setInput] = useState("");
-    const history = useHistory();
+    
     const[{}, dispatch] = useStateValue();
 
     const search = e => {
@@ -67,7 +74,6 @@ const Search = ({ hide }) => {
             <input value={input} onChange={e => setInput(e.target.value)} />
             <MicIcon />
             </SearchInput>
-            
             {!hide && (
                 <SearchButton>
                     <Button type="submit" variant="outlined">Google Search</Button>
